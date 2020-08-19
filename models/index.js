@@ -8,11 +8,18 @@ User.hasMany(Post, {
     foreignKey: 'user_id'
 });
 
+//user only belongs to post
+Post.belongsTo(User, {
+    foreignKey: "user_id",
+    onDelete: "cascade",
+});
+
 User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
     foreignKey: 'user_id'
 });
+
   
 Post.belongsToMany(User, {
     through: Vote,

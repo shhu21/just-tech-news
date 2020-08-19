@@ -5,7 +5,34 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    // columns will go here
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    //comment text
+    comment_text: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    //who commented
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    },
+    //which post they commented on
+    post_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'post',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
