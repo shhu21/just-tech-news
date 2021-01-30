@@ -1,7 +1,7 @@
 # just-tech-news
 
 # URL Link
-[Heroku Link](https://rocky-falls-40936.herokuapp.com/)
+[Heroku Link](https://gentle-river-69055.herokuapp.com/)
 
 # Table Of Contents
 
